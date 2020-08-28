@@ -7,7 +7,7 @@ then
 	exit 1
 fi
 if [ -z "$2" ]
-then 
+then
 	echo "No serial port specified. Using ttyUSB0."
 	serial_port=/dev/ttyUSB0
 else
@@ -21,6 +21,6 @@ esptool.py --port $serial_port erase_flash
 echo "Erased flash. esptool.py returned code $?"
 echo "--------------------------------------------------------------------------"
 echo "Will run -"
-echo "esptool.py --verify --chip esp32 --port $serial_port write_flash 0x100 $1"
-esptool.py --verify --chip esp32 --port $serial_port write_flash 0x100 $1
+echo "esptool.py --chip esp32 --port $serial_port write_flash 0x100 $1"
+esptool.py --chip esp32 --port $serial_port write_flash 0x100 $1
 echo "Completed. esptool.py returned code $?"
