@@ -17,6 +17,12 @@ esptool.py --verify --chip esp32 --port /dev/ttyUSB0 write_flash -z 0x1000 <firw
 screen /dev/ttyUSB0
 ```
 
+Alternatively
+```
+picocom /dev/ttyUSB0 -b115200
+```
+
+
 
 ## Ampy
 

@@ -21,6 +21,6 @@ esptool.py --port $serial_port erase_flash
 echo "Erased flash. esptool.py returned code $?"
 echo "--------------------------------------------------------------------------"
 echo "Will run -"
-echo "esptool.py --chip esp32 --port $serial_port write_flash 0x100 $1"
+echo "esptool.py --chip esp32 --port $serial_port write_flash 0x1000 $1"
 esptool.py --chip esp32 --port $serial_port write_flash 0x100 $1
 echo "Completed. esptool.py returned code $?"
